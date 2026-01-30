@@ -1,0 +1,516 @@
+ /*fuente po defecto del documento: 16px
+    h1 : tamaño de fuente el doble de lo que hay por defecto en el documento
+    main: ancho maximo 1000px
+    padding del main y footer:
+    */
+
+    :root{  /*aqui creamos variables para q sea mas util y si lo cambio aqui, se cambia en todo.*/
+        --at-primary-color:;
+        --at-secondary-color:;
+        --at-font-size-medium:;
+        --at-font-size-medium:;
+    }
+
+
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    nav ul{
+        list-style-type: none;
+        display: flex;
+        gap: 30px; /* añadimos espacio entre los li*/
+        margin-bottom: 0;
+    }
+
+    nav ul li a {           /*Le voy a quitar el subrayado a los enlaces.*/
+
+        text-decoration: none;
+        color: #2c3e50;
+        font-weight: 500;
+        position: relative;
+        transition: color 0.3s ease; /* color del texto/ durante 0.3 segundos, ease ritmo transicion/*/
+        padding-bottom: 5px;
+    }
+
+    nav ul li a::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -5px;
+        left: 0;
+        background-color: #8b0000;
+        transition: width 0.3s ease-out;
+    }
+
+    nav ul li a:hover {
+        color: #8b0000;
+    }
+    
+    nav ul li a:hover::after {
+        width: 100%;
+    }
+
+
+    .titulo div {
+        font-size: 1.5rem;
+        margin-bottom: 0;
+        color: #8b0000;
+    }
+
+    .titulo span {
+
+        font-size: 0.9rem;
+        color: #444;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing:  1px;
+        margin-bottom: 0;
+    }
+
+
+
+    .social-links {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+
+     .social-links a {
+        text-decoration: none;
+        transition: transform 0.3s ease;
+        display: flex;
+        width: 30px; 
+        height: 30px;
+        justify-content: center; /* Centra el icono dentro del espacio */
+        align-items: center;
+        font-size: 0;
+    }
+
+     .social-links a i {
+        font-size: 1.5rem ;
+        transition: color 0.3s ease;
+    }
+
+    .fa-github{
+    color: #333333;
+}
+
+.fa-linkedin{
+    color: #0A66C2; 
+}
+
+    .social-links a:hover {
+        transform: scale(1.2);
+    }
+
+    .social-links a:hover i {
+        color: #8b0000;
+    }
+
+    .contenedor-header {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 1.5rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+header {
+   width: 100%;
+   position: fixed;
+   top: 0;
+   background: rgba(255, 255, 255, 0.75);
+   backdrop-filter: blur(8px);
+   border-radius: 0 0 20px 20px;
+   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+   background-color: white;
+   z-index: 1000;
+   padding: 0;
+}
+
+
+.cta-header {
+    border-radius: 8px;
+}
+
+
+#inicio {
+    display: flex;
+    margin-top: 3rem;
+    align-items: center; /*la imagen y el texto los ponemos vertical*/
+    justify-content: center;
+    min-height: 80vh; /*para que ocupe casi toda la altura visible.*/
+    padding: 0 0 50px 0; /*espacio arriba y abajo.*/
+    text-align: left;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0 , 0 , 0.3)), url(images/desarrollo.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+#inicio .text_content {
+    color: white !important;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+.hero-greeting {
+    font-size: 1.8rem; 
+    color: #ffc0cb !important;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.hero-title {
+    font-size: 4rem;
+    color: white;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    font-weight: 900;
+}
+
+#inicio .text_content p {
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: #333;
+    max-width: 700px;
+    margin: 0 auto 3rem 0;
+}
+
+
+
+
+    html{
+    font-size: 16px;
+}
+h1 {   /*El rem se refiere al font-size del elemento raiz. si fuera em, se referiria al del contenedor padre */
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+}
+h2 {
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+}
+
+.profile-pic-about{
+    width: 200px; /*le pongo un tamaño fijo en pixeles.*/
+    height: 200px;/*mismo tamaño ancho y alto*/
+    object-fit: cover; /*para que cubra esos 200px sin distorsiones.*/
+    border-radius: 8px;
+    border: 5px solid #fff; /* 5px de grosor, tipo d linea solid, continua, border blanco.*/
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /*0, no hay sombra q se mueva, 4px, desplazamiento vertical 4px , 8px cuanto se extiende la sombra*/
+    transform: rotateZ(deg); /*para girar mi foto, de momento no pongo nada.*/
+    transition: 0;
+}
+
+.profile-pic-about:hover  {
+    transform: rotateZ(0deg) scale(1.02);
+}
+
+#inicio .text_content p {
+    font-size: 1.5rem; /*le doy tamaño grande para el mensaje principal*/
+    font-weight: 300; /*ligero*/
+    color: #444; 
+    margin-bottom: 2rem;
+}
+
+#sobreMi h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.sobremi-contenido {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: flex-start;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.bio-principal {
+    display: flex;
+    gap: 30px;
+    width: 100%;
+    align-items: flex-start;
+}
+
+.bio-foto-container {
+    flex-basis: 200px;
+    flex-shrink: 0;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.profile-pic-about {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 5px solid #fff0f5;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    transform: rotateZ(-1deg);
+    transition: transform 0.3s ease;
+}
+
+.bio-intro-text {
+    flex-grow: 1;
+    flex-basis: 50%;
+    
+    
+}
+
+.bio-intro-text h3 {
+    color: #8b0000;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+.bio-intro-text p {
+    text-align: justify;
+}
+
+.skills-card {
+    width: 100%;
+    flex-basis: auto;
+    padding-left: 0;
+}
+
+.skills-card h3 {
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+    padding-left: 5px;
+    border-bottom: 2px solid #8b0000;
+    width: fit-content;
+    padding-bottom: 3px;
+    font-size: 1.3rem;
+}
+
+.skills-card ul li {
+    background-color: #f8f8f8;
+    padding: 8px 10px;
+    margin-bottom: 8px;
+    border-left: 3px solid #8b0000;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+
+#proyectos {
+    padding: 50px 0;
+}
+
+.proyectos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+#proyectos h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+
+.proyecto {
+    background-color: white;
+    padding: 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.proyecto:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+
+}
+
+.proyecto h3 {
+    color: #8b0000;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.proyecto p {
+    color: #555;
+}
+
+
+
+main{
+    max-width: 1000px; /*es el ancho de todo el main, hace q en un monitor enorme, no se estire mucho*/
+    width: 90%; /*en una pantalla mediana, queda un 10& y este es un pequeño margen*/
+    margin: 0 auto; /*reparte por igual*/
+    padding: 1rem;
+    border-radius: 12px;
+}
+body{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color:black;
+    background-color: #ffc0cba6;
+    padding-top: 7rem;
+    padding-bottom: 20px;
+}
+
+p{
+    color:#555;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    letter-spacing: normal;
+}
+
+#contacto {
+
+    padding: 50px;
+    text-align: center;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column ;
+    gap: 15px;
+    max-width: 500px; /*limita el ancho maximo del formulario para que no se estire mucho en pantallas grandes*/
+    margin: 0 auto; /*margen calculado automaticamente a los lados*/
+    padding: 20px ;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-form textarea {
+    resize: vertical;  /*Para poder ajustar el tamaño de la altura del área*/
+}
+
+.contact-form button[type="submit"]{
+    background-color: #cb5757;
+    color: white;
+    padding: 15px;
+    border:none;
+    border-radius: 5px;
+    cursor:pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button [type="submit"]:hover {
+    background-color: #f16d6d;
+    border-radius: 12px;
+}
+
+footer{
+    max-width: 1000px; 
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px 0;
+    border-color: 1px solid #ddd;
+    font-size: 0,9rem;
+}
+
+.proyecto-info {
+    padding: 20px;
+}
+
+.proyecto-media {
+    position: relative; /*Hace que el overlay esté encima de la imagen*/
+    overflow: hidden; /*Recorta la imagen cuando aplicamos zoom.*/
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 10px; /*Espacio entre imagen y texto.*/
+    height: 400px;
+}
+
+.proyecto-media img  {
+    
+
+    width: 100%;  
+    height: 100%;
+    display: block; /*100% del ancho de mi contenedor*/
+    transition: transform 0.4s ease;
+    object-fit: cover;  /*Esto hace que la imagen se recorte para llenar el espacio sin distorsiones.*/
+}
+
+.proyecto:hover .proyecto-media img {
+    transform: scale(1.05);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.proyecto:hover .overlay {
+    opacity: 1;
+}
+
+.btn-proyecto {
+    background-color:white;
+    color: #8b0000;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    opacity: 0;
+    transform: translate(10px) ;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.proyecto:hover .btn-proyecto {
+    opacity: 1;
+    transform: translatey(0);
+    transition-delay: 0.1s;
+
+}
+
+
+
+/*Adaptable.Si el ancho de la ventana es menor o igual a 768px,se aplica esto*/
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+.titulo {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+nav ul {
+    flex-direction: column; /*se apila el menu principal*/
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+}
+
+

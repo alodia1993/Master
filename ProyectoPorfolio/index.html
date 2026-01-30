@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Desarrolladora web">
+    <link rel="shortcut icon" href="images/icono.png" type="images">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Porfolio Alodía</title>
+</head>
+<body>
+    <header> <!--Introduccion de la pagina Logo,nombre,enlaces a inicio,proyectos,sobre mi, contacto,git,linkdn-->
+    <div class="contenedor-header">
+       <div class="titulo">
+        <div>Alodía Hernández</div>
+        <span>Desarrollo web</span>      
+       </div>
+
+        <nav>
+            <ul>
+                
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#SobreMi">Sobre mi</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="social-links"> <!--class: si creamos la class luego puedo aplicar estilos mas facil en css. target: abre una pestaña nueva. Title: el mensaje que sale cuando se pasa el raton por encima-->
+            <a href="https://github.com/alodia1993" target="_blank" title="Mi perfil de Github">
+                <i class=" fa-brands fa-github "> </i>
+            </a>            
+            <a href="https://www.linkedin.com/in/476619119/" target="_blank" title="Mi perfil de LinkedIn">
+                <i class=" fa-brands fa-linkedin "></i>
+            </a>               
+        </div>
+    </div>
+    </header>
+        
+
+
+        <main>  <!--se divide en secciones. A nivel funcional section, div.. es lo mismo. Pero div no significa nada, section si singifica seccion.--> 
+            <section id="inicio">                          
+            <div class="hero-content"> <!--para aplicar diseños a toda la seccion--> 
+
+                <div class="text_content"> 
+                    
+
+                    <h1 class="hero-title">Transformando ideas en soluciones web funcionales</h1>
+
+                    <p>El diseño de la lógica robusta y escalable del back-end para construir el puente entre la visión y una experiencia web accesible y optimizada, es mi principal objetivo.</p>
+                    
+                </div>         
+            </div>
+            </section>
+
+        <section id="SobreMi">                             
+           
+            <div class="SobreMi-contenido">
+            
+                <div class="bio-principal">              
+            
+                <div class="bio-foto-container">
+                    <img src="images/fotocv.png" alt="Foto Alodía" class="profile-pic-about"> 
+                </div> 
+
+                <div class="bio-intro-text">
+                    <h3>Mi historia y enfoque</h3>
+                    <p id="midescripcion">Soy desarrolladora Web en formación, con gran motivacion por dar soluciones que sean útiles y bien construidas.Me gusta la lógica y el entender el funcionamiento, lo que hay detrás,resolver problemas y llevar a la realidad ideas digitales. <br> Aunque mi trayectoria profesional,hace unos años, empezó en un area distinta,siempre he estado vinculada a la comunicación, el aprendizaje continuo y trabajo en equipo.Lo que me otorgó experiencia y habilidades que son esenciales en la tecnología: organización,capacidad para explicar conceptos de forma clara, creatividad y perseverancia en lo que hago y en lo que me enfoco.</p>
+                    <p>Con el tiempo pude descubrir que la tecnología reunía lo que disfruto: mejora continua,lógica y creación. Lo que me llevó a redirigir y formarme de forma continua e intensa en el desarrollo web.</p>
+                    <p>Desde entonces , busco seguir creciendo como desarrolladora , donde pueda aportar valor en un equipo y especializarme, con el princiapl objetivo de consolidar una carrera en el sector tech y seguir  creando y dando soluciones.</p>
+                </div>
+                    </div>
+
+                <div class="skills-card">
+                    <h3>Habilidades ténicas Clave</h3>
+                    <ul>
+                        <li>Lenguajes: HTML5, CSS3, JavaScript, Java.</li>
+                        <li>Frameworks: React, Node.js, Bootstrap</li>
+                        <li>Bases de datos: Mysql </li>
+                        <li>Control de versiones: Git, GitHub, VScode.</li>
+                    </ul>
+                </div>                                     
+            </div>        
+        </section>
+
+        <section id="proyectos">
+                <h2>Mis proyectos destacados</h2>
+
+            <div class="proyectos-grid"> 
+
+                    <div class="proyecto">
+                        <div class="proyecto-media">
+                            <img src="images/enseñanzaOnline.jpg" alt="Imagen del proyecto de la web de enseñanza">
+                            <div class="overlay">
+                                <a href="URL_PROYECTO" target="_blank" class="btn-proyecto">Ver proyecto</a>
+                            </div>
+                        </div>
+                        <div class="proyecto-info">
+                            <h3>Plataforma E-learning para la Enseñanza de Español Online</h3>
+                            <p>Desarrollo y estructura de una plataforma educativa bilingüe diseñada para optimizar la interacción y la gestión de contenido entre profesores y alumnos de español como lengua extranjera. El proyecto incluye un sistema de flujo de tareas bidireccional, permitiendo al alumnado subir trabajos de forma sencilla para su revisión, y al profesorado administrar recursos didácticos. Además, cuenta con un módulo de e-commerce implementado con carrito de compra para la adquisición de cursos premium especializados (Gramática, Writing, etc.), consolidando un ecosistema educativo completo, robusto y centrado en la usabilidad. </div> 
+                    </div>
+                    
+                    <div class="proyecto">
+                        <div class="proyecto-media">
+                            <img src="images/ganaderiaOvejas.jpg" alt="Imagen del proyecto del a web de ganaderia">
+                            <div class="overlay">
+                                <a href="URL_PROYECTO" target="_blank" class="btn-proyecto">Ver proyecto</a>
+                            </div>
+                        </div>
+                        <div class="proyecto-info">
+                            <h3>Web corporativa y de divulgación para Ganadería Bovina Extensiva</h3>
+                            <p>Diseño de un sitio web informativo y visual enfocado en la digitalización de la marca de una pequeña explotación de ganadería bovina extensiva. El principal objetivo es impulsar la transparencia y el conocimiento sobre esta práctica tradicional. La web detalla la información del ganado, la trazabilidad del producto, la participación en concursos sectoriales y la ubicación de la explotación. La estructura fomenta la conexión directa con el cliente potencial, incluyendo un formulario de contacto y una sección para la obtención de sus productos, transformando el negocio en una entidad accesible y transparente en línea.</p>
+                        </div> 
+                    </div> 
+                    
+                    <div class="proyecto">
+                        <div class="proyecto-media">
+                            <img src="images/bisuteria.jpg" alt="Imagen del proyecto de la web de bisuteria">
+                            <div class="overlay">
+                                <a href="URL_PROYECTO" target="_blank" class="btn-proyecto">Ver proyecto</a>
+                            </div>
+                        </div>
+                        <div class="proyecto-info">
+                            <h3>Página Web tienda online de bisuteria</h3>
+                            <p>Desarrollo de una plataforma de comercio electrónico diseñada para la venta y exposición de colecciones de bisutería. El objetivo principal fue crear una experiencia de compra intuitiva y visualmente atractiva. La funcionalidad del e-commerce incluye un sistema de catálogo navegable con filtros por categoría (collares, pendientes, pulseras), gestión simulada de stock y un carrito de compra funcional que permite al usuario añadir, eliminar y gestionar la cantidad de artículos antes de simular el proceso de checkout. El diseño responsive garantiza que las galerías de productos se muestren con alta calidad y claridad en cualquier dispositivo.</p>
+                            </div>
+                    </div> 
+                    
+                    <div class="proyecto">
+                        <div class="proyecto-media">
+                            <img src="images/reatauranteItaliano.jpg" alt="Imagen del proyecto del a web del restarante italiano">          
+                            <div class="overlay">
+                                <a href="URL_PROYECTO" target="_blank" class="btn-proyecto">Ver proyecto</a>
+                            </div>
+                        </div>
+                        <div class="proyecto-info">
+                            <h3>Página Web Restaurante italiano</h3>
+                            <p>Creación de la presencia digital completa para un restaurante, con el foco en la conversión y la usabilidad móvil. El sitio web presenta la experiencia gastronómica mediante una galería de platos y la historia del restaurante, e incluye un menú digital de fácil navegación. La funcionalidad clave es la implementación de un formulario de reservas intuitivo (simulado o integrado) y un sistema claro de contacto y ubicación, asegurando que los clientes puedan acceder a la información y reservar una mesa de manera rápida y eficiente desde cualquier dispositivo.</p>
+                        </div> 
+                    </div> 
+
+            </div> 
+        </section>
+
+
+
+            <section id="contacto">
+                <h2>¿Hablamos?</h2>
+                <form action="#" method="POST" class="contact-form">
+                    <input type="text" name="nombre" placeholder="Nombre" required>
+                    <input type="email" name="correo" placeholder="Correo electrónico" required>
+                    <textarea name="mensaje" placeholder="Escribe tu mensaje..." rows="6" required></textarea>
+                    <button type="submit">Enviar mensaje</button>
+                </form>
+            </section>
+        </main>
+        
+    <footer>
+        <p>&copy; 2025 Alodía Hernández. Todos los derechos reservados</p>
+    </footer>  <!--cierre,copirigth,rrss...-->
+</body>
+</html>
