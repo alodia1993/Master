@@ -3,13 +3,7 @@
     main: ancho maximo 1000px
     padding del main y footer:
     */
-
-    :root{  /*aqui creamos variables para q sea mas util y si lo cambio aqui, se cambia en todo.*/
-        --at-primary-color:;
-        --at-secondary-color:;
-        --at-font-size-medium:;
-        --at-font-size-medium:;
-    }
+   
 
 
     *{
@@ -121,6 +115,37 @@
         align-items: center;
     }
 
+
+
+
+
+
+/* Ajustamos la tarjeta de skills para que sea más estrecha y compacta */
+.skills-card {
+    width: 100%;
+    background: #fdf2f4; /* Un rosa muy clarito para diferenciarlo */
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.skills-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #8b0000;
+}
+
+.skills-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skills-card ul li {
+    font-size: 0.85rem;
+    margin-bottom: 5px;
+    padding-left: 10px;
+    border-left: 3px solid #8b0000;
+}
+
 header {
    width: 100%;
    position: fixed;
@@ -139,19 +164,18 @@ header {
     border-radius: 8px;
 }
 
-
 #inicio {
     display: flex;
     margin-top: 3rem;
-    align-items: center; /*la imagen y el texto los ponemos vertical*/
+    align-items: center; 
     justify-content: center;
-    min-height: 80vh; /*para que ocupe casi toda la altura visible.*/
-    padding: 0 0 50px 0; /*espacio arriba y abajo.*/
+    min-height: 80vh; 
+    padding: 0 20px; 
     text-align: left;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0 , 0 , 0.3)), url(images/desarrollo.jpg);
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
+    /* Cambiamos la imagen por un color sólido o un degradado sutil */
+    background-color: #87a6c4; /* Un tono oscuro elegante */
+    /* O si prefieres un degradado sin fotos: */
+    /* background: linear-gradient(135deg, #2c3e50 0%, #000000 100%); */
 }
 
 #inicio .text_content {
@@ -177,16 +201,6 @@ header {
     font-weight: 900;
 }
 
-#inicio .text_content p {
-    font-size: 1.3rem;
-    font-weight: 300;
-    color: #333;
-    max-width: 700px;
-    margin: 0 auto 3rem 0;
-}
-
-
-
 
     html{
     font-size: 16px;
@@ -208,7 +222,7 @@ h2 {
     border-radius: 8px;
     border: 5px solid #fff; /* 5px de grosor, tipo d linea solid, continua, border blanco.*/
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /*0, no hay sombra q se mueva, 4px, desplazamiento vertical 4px , 8px cuanto se extiende la sombra*/
-    transform: rotateZ(deg); /*para girar mi foto, de momento no pongo nada.*/
+    transform: rotateZ(-1deg); /*para girar mi foto, de momento no pongo nada.*/
     transition: 0;
 }
 
@@ -239,12 +253,7 @@ h2 {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.bio-principal {
-    display: flex;
-    gap: 30px;
-    width: 100%;
-    align-items: flex-start;
-}
+
 
 .bio-foto-container {
     flex-basis: 200px;
@@ -253,17 +262,54 @@ h2 {
     padding-top: 10px;
 }
 
-.profile-pic-about {
+.fila-superior-info {
+    display: flex;
+    align-items: flex-start; /* Alinea al techo */
+    gap: 30px;
     width: 100%;
-    max-width: 200px;
-    height: auto;
-    object-fit: cover;
-    border-radius: 8px;
-    border: 5px solid #fff0f5;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-    transform: rotateZ(-1deg);
-    transition: transform 0.3s ease;
+    margin-bottom: 20px;
 }
+
+/* Contenedor para que la foto y el botón estén alineados en columna */
+.foto-y-boton-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el botón respecto a la foto */
+    flex: 0 0 200px;
+    gap: 15px;
+}
+
+/* ESTILO DEL BOTÓN (Para que no sea un simple enlace) */
+.btn-saber-mas {
+    display: inline-block;
+    background-color: #8b0000;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-align: center;
+    transition: background 0.3s ease, transform 0.2s ease;
+    width: 100%; /* Para que ocupe el mismo ancho que la foto */
+}
+
+.btn-saber-mas:hover {
+    background-color: #cb5757;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.skills-card {
+    flex: 1;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #eee;
+    height: 100%; /* Para que cuadre con la altura de la foto */
+}
+
+
 
 .bio-intro-text {
     flex-grow: 1;
@@ -281,11 +327,7 @@ h2 {
     text-align: justify;
 }
 
-.skills-card {
-    width: 100%;
-    flex-basis: auto;
-    padding-left: 0;
-}
+
 
 .skills-card h3 {
     margin-bottom: 1.5rem;
@@ -414,7 +456,7 @@ p{
     transition: background-color 0.3s ease;
 }
 
-.contact-form button [type="submit"]:hover {
+.contact-form button[type="submit"]:hover {
     background-color: #f16d6d;
     border-radius: 12px;
 }
@@ -494,12 +536,77 @@ footer{
 /*Adaptable.Si el ancho de la ventana es menor o igual a 768px,se aplica esto*/
 
 @media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: center;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
+    /* 1. El texto del inicio es muy grande para el móvil, lo bajamos */
+    .hero-title {
+        font-size: 2.5rem; 
     }
+    
+
+   /* Contenedor de todo el bloque Sobre Mí */
+.bio-principal-vertical {
+    display: flex;
+    flex-direction: column; /* El texto irá debajo de la fila foto/skills */
+    gap: 30px;
+    width: 100%;
+}
+
+
+
+.bio-foto-container {
+    flex: 0 0 200px; /* La foto mantiene sus 200px */
+}
+
+.skills-card {
+    flex: 1; /* Las skills ocupan todo el resto del ancho a la derecha */
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #eee;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
+}
+
+/* Organizamos las skills en dos columnitas dentro de su caja para que no quede mucho hueco blanco */
+.skills-grid {
+    display: flex;
+    gap: 40px;
+}
+
+.skills-card h3 {
+    color: #8b0000;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #8b0000;
+    width: fit-content;
+}
+
+.skills-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skills-card ul li {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+
+
+    /* 3. Las columnas de los proyectos (eran 2) ahora serán 1 sola */
+    .proyectos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* 4. El header: centramos los elementos para que no se amontonen */
+    .contenedor-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    nav ul {
+        flex-wrap: wrap; /* Para que si no caben los enlaces, bajen a otra línea */
+        justify-content: center;
+        gap: 15px;
+        display: flex;
+    }
+}
 
 .titulo {
     text-align: center;
@@ -507,10 +614,108 @@ footer{
 }
 
 nav ul {
-    flex-direction: column; /*se apila el menu principal*/
+    flex-direction: row; /*se apila el menu principal*/
     gap: 10px;
     margin-bottom: 1rem;
 }
+
+
+
+/* El modal (la ventana flotante) */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85); /* Fondo oscuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+    z-index: 3000;
 }
 
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    transform: translateY(-20px);
+    transition: transform 0.4s ease;
+    text-align: left;
+}
 
+/* Mostrar el modal cuando se hace clic */
+.modal-overlay:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-overlay:target .modal-content {
+    transform: translateY(0);
+}
+@media (max-width: 768px) {
+    .bio-principal {
+        flex-direction: column;
+        align-items: center;
+    }
+    .columna-izquierda {
+        flex: 1 1 auto;
+        width: 100%;
+        align-items: center;
+    }
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 2rem;
+    color: #8b0000;
+    text-decoration: none;
+}
+
+.enlace-historia {
+    color: #8b0000; /* Tu color granate */
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 5px; /* Separación de la última palabra */
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.enlace-historia:hover {
+    color: #cb5757; /* Color más claro al pasar el ratón */
+    border-bottom: 1px solid #cb5757; /* Subrayado elegante al hacer hover */
+}
+
+/* Opcional: Si quieres que la foto siga abriendo el modal aunque el texto esté al lado */
+.bio-foto-container img {
+    cursor: pointer;
+}
+
+/* Para que en el móvil no se vea apretado, ahí sí lo ponemos uno debajo de otro */
+@media (max-width: 768px) {
+   
+    .skills-grid {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Responsivo para móvil */
+@media (max-width: 768px) {
+    .fila-superior-info {
+        flex-direction: column;
+        align-items: center;
+    }
+    .skills-grid {
+        display: block; /* En móvil, una lista debajo de otra */
+    }
+}
