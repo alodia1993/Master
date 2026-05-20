@@ -1,13 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Desarrolladora web">
-    <link rel="shortcut icon" href="images/icono.png" type="images">
+    <meta name="description" content="Portfolio de Alodía Hernández, desarrolladora web especializada en back-end con React, Node.js, Express y PostgreSQL.">
+    <link rel="shortcut icon" href="images/icono.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <title>Porfolio Alodía</title>
+    <title>Alodía Hernández | Desarrolladora Web</title>
 </head>
 <body>
     <header> <!--Introduccion de la pagina Logo,nombre,enlaces a inicio,proyectos,sobre mi, contacto,git,linkdn-->
@@ -44,40 +44,82 @@
             <section id="inicio">                          
             <div class="hero-content"> <!--para aplicar diseños a toda la seccion--> 
 
-                <div class="text_content"> 
-                    
+                <div class="text_content">
+
+                    <span class="hero-badge">Desarrolladora Web</span>
 
                     <h1 class="hero-title">Transformando ideas en soluciones web funcionales</h1>
 
-                    <p>El diseño de una lógica de back-end robusta y escalable, que sirva de puente entre la visión del proyecto y una experiencia web accesible y optimizada, es mi principal objetivo.</p>
-                    
+                    <p>Diseño lógica back-end robusta y escalable que sirve de puente entre la visión del proyecto y una experiencia web accesible y optimizada.</p>
+
+                    <div class="hero-cta">
+                        <a href="#proyectos" class="btn-primary">Ver proyectos</a>
+                        <a href="#contacto" class="btn-secondary">Contacta conmigo</a>
+                    </div>
+
                 </div>         
             </div>
             </section>
 
         <section id="SobreMi">                             
            
-           <div class="SobreMi-contenido">
+           <div class="sobremi-contenido">
     <div class="fila-superior-info">
         
         <div class="foto-y-boton-container">
-            <div class="bio-foto-container">
-                <img src="images/fotoPorfolio.png" alt="Foto Alodía" class="profile-pic-about">
+            <img src="images/fotoPorfolio.png" alt="Foto Alodía" class="profile-pic-about">
+            <div class="bio-info">
+                <p class="bio-nombre">Alodía Hernández</p>
+                <p class="bio-rol">Desarrolladora Web</p>
+                <p class="bio-descripcion">Especializada en back-end y con experiencia en el stack completo, desde la base de datos hasta el despliegue en producción.</p>
             </div>
-            <a href="#modal-historia" class="btn-saber-mas">Saber más sobre mí</a>
+            <a href="#modal-historia" class="btn-saber-mas">Leer mi historia →</a>
         </div>
 
         <div class="skills-card">
             <h3>Habilidades Técnicas</h3>
             <div class="skills-grid">
-                <ul>
-                    <li><strong>Lenguajes:</strong> HTML5, CSS3, Java Script, Java</li>
-                    <li><strong>Frameworks:</strong> React, Node.js</li>
-                </ul>
-                <ul>
-                    <li><strong>Bases de datos:</strong> MySQL</li>
-                    <li><strong>Herramientas:</strong> Git, GitHub, Visual Studio Code, Figma</li>
-                </ul>
+                <div class="skill-category">
+                    <span class="skill-label">Lenguajes</span>
+                    <div class="skill-tags">
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Java</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <span class="skill-label">Frameworks</span>
+                    <div class="skill-tags">
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Express</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <span class="skill-label">Bases de datos</span>
+                    <div class="skill-tags">
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">Neon</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <span class="skill-label">Despliegue</span>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Vercel</span>
+                        <span class="skill-tag">Render</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <span class="skill-label">Herramientas</span>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">GitHub</span>
+                        <span class="skill-tag">VS Code</span>
+                        <span class="skill-tag">Figma</span>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -106,50 +148,42 @@
                         <div class="proyecto-media">
                             <img src="images/enseñanzaOnline.jpg" alt="Imagen del proyecto de la web de enseñanza">
                             <div class="overlay">
-                                <a href="URL_PROYECTO" target="_blank" class="btn-proyecto">Ver proyecto</a>
+                                <a href="https://habla-ya-gamma.vercel.app/" target="_blank" class="btn-proyecto">Ver proyecto</a>
                             </div>
                         </div>
                         <div class="proyecto-info">
                             <h3>Plataforma E-learning para la Enseñanza de Español Online</h3>
-                            <p>Desarrollo y estructura de una plataforma educativa bilingüe diseñada para optimizar la interacción y la gestión de contenido entre profesores y alumnos de español como lengua extranjera. El proyecto incluye un sistema de flujo de tareas bidireccional, permitiendo al alumnado subir trabajos de forma sencilla para su revisión, y al profesorado administrar recursos didácticos. Además, cuenta con un módulo de e-commerce implementado con carrito de compra para la adquisición de cursos premium especializados (Gramática, Writing, etc.), consolidando un ecosistema educativo completo, robusto y centrado en la usabilidad. </div> 
+                            <p>Plataforma educativa bilingüe para la enseñanza de español como lengua extranjera. Incluye gestión de contenido para profesores y alumnos, sistema de entrega de tareas y e-commerce con carrito de compra para cursos premium.</p>
+                        </div> 
                     </div>
                     
                     <div class="proyecto">
                         <div class="proyecto-media">
                             <img src="images/ganaderiaOvejas.jpg" alt="Imagen del proyecto del a web de ganaderia">
-                            <div class="overlay">
-                                <a href="URL_PROYECTO" target="_blank" class="btn-proyecto">Ver proyecto</a>
-                            </div>
                         </div>
                         <div class="proyecto-info">
                             <h3>Web corporativa y de divulgación para Ganadería Bovina Extensiva</h3>
-                            <p>Diseño de un sitio web informativo y visual enfocado en la digitalización de la marca de una pequeña explotación de ganadería bovina extensiva. El principal objetivo es impulsar la transparencia y el conocimiento sobre esta práctica tradicional. La web detalla la información del ganado, la trazabilidad del producto, la participación en concursos sectoriales y la ubicación de la explotación. La estructura fomenta la conexión directa con el cliente potencial, incluyendo un formulario de contacto y una sección para la obtención de sus productos, transformando el negocio en una entidad accesible y transparente en línea.</p>
+                            <p>Web informativa para una explotación de ganadería bovina extensiva, enfocada en transparencia y divulgación de la marca. Incluye información del ganado, trazabilidad del producto, participación en concursos y formulario de contacto directo con el cliente.</p>
                         </div> 
                     </div> 
                     
                     <div class="proyecto">
                         <div class="proyecto-media">
                             <img src="images/bisuteria.jpg" alt="Imagen del proyecto de la web de bisuteria">
-                            <div class="overlay">
-                                <a href="URL_PROYECTO" target="_blank" class="btn-proyecto">Ver proyecto</a>
-                            </div>
                         </div>
                         <div class="proyecto-info">
-                            <h3>Página Web tienda online de bisuteria</h3>
-                            <p>Desarrollo de una plataforma de comercio electrónico diseñada para la venta y exposición de colecciones de bisutería. El objetivo principal fue crear una experiencia de compra intuitiva y visualmente atractiva. La funcionalidad del e-commerce incluye un sistema de catálogo navegable con filtros por categoría (collares, pendientes, pulseras), gestión simulada de stock y un carrito de compra funcional que permite al usuario añadir, eliminar y gestionar la cantidad de artículos antes de simular el proceso de checkout. El diseño responsive garantiza que las galerías de productos se muestren con alta calidad y claridad en cualquier dispositivo.</p>
-                            </div>
+                            <h3>Tienda online de bisutería</h3>
+                            <p>E-commerce para la venta de bisutería con catálogo filtrable por categoría, gestión de stock simulada y carrito de compra funcional. Diseño responsive que garantiza una experiencia de compra fluida en cualquier dispositivo.</p>
+                        </div>
                     </div> 
                     
                     <div class="proyecto">
                         <div class="proyecto-media">
-                            <img src="images/reatauranteItaliano.jpg" alt="Imagen del proyecto del a web del restarante italiano">          
-                            <div class="overlay">
-                                <a href="URL_PROYECTO" target="_blank" class="btn-proyecto">Ver proyecto</a>
-                            </div>
+                            <img src="images/reatauranteItaliano.jpg" alt="Imagen del proyecto del a web del restarante italiano">
                         </div>
                         <div class="proyecto-info">
-                            <h3>Página Web Restaurante italiano</h3>
-                            <p>Creación de la presencia digital completa para un restaurante, con el foco en la conversión y la usabilidad móvil. El sitio web presenta la experiencia gastronómica mediante una galería de platos y la historia del restaurante, e incluye un menú digital de fácil navegación. La funcionalidad clave es la implementación de un formulario de reservas intuitivo (simulado o integrado) y un sistema claro de contacto y ubicación, asegurando que los clientes puedan acceder a la información y reservar una mesa de manera rápida y eficiente desde cualquier dispositivo.</p>
+                            <h3>Página Web Restaurante Italiano</h3>
+                            <p>Presencia digital completa para un restaurante italiano, con galería de platos, menú digital y formulario de reservas. Optimizada para móvil, con información de contacto y ubicación de acceso rápido.</p>
                         </div> 
                     </div> 
 
@@ -159,18 +193,42 @@
 
 
             <section id="contacto">
-                <h2>¿Hablamos?</h2>
-                <form action="#" method="POST" class="contact-form">
-                    <input type="text" name="nombre" placeholder="Nombre" required>
-                    <input type="email" name="correo" placeholder="Correo electrónico" required>
-                    <textarea name="mensaje" placeholder="Escribe tu mensaje..." rows="6" required></textarea>
-                    <button type="submit">Enviar mensaje</button>
-                </form>
+                <div class="contacto-grid">
+
+                    <div class="contacto-info">
+                        <h2>¿Hablamos?</h2>
+                        <p class="contacto-intro">Estoy abierta a nuevas oportunidades laborales y a proyectos web. Si tienes algo en mente, escríbeme — te respondo en menos de 24h.</p>
+
+                        <div class="contacto-canales">
+                            <a href="mailto:alodiahernandez33@gmail.com" class="contacto-canal">
+                                <i class="fa-solid fa-envelope"></i>
+                                <span>alodiahernandez93@gmail.com</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/476619119/" target="_blank" class="contacto-canal">
+                                <i class="fa-brands fa-linkedin"></i>
+                                <span>LinkedIn — Alodía Hernández</span>
+                            </a>
+                            <a href="cv/CV_3_Desarrollo_Web.pdf" download class="contacto-canal">
+                                <i class="fa-solid fa-file-arrow-down"></i>
+                                <span>Descargar CV</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <form action="https://formspree.io/f/maqkqgkn" method="POST" class="contact-form">
+                        <input type="hidden" name="_subject" value="Nuevo mensaje desde tu portfolio">
+                        <input type="text" name="nombre" placeholder="Nombre" required>
+                        <input type="email" name="_replyto" placeholder="Correo electrónico" required>
+                        <textarea name="mensaje" placeholder="Escribe tu mensaje..." rows="6" required></textarea>
+                        <button type="submit">Enviar mensaje</button>
+                    </form>
+
+                </div>
             </section>
         </main>
         
     <footer>
-        <p>&copy; 2025 Alodía Hernández. Todos los derechos reservados</p>
+        <p>&copy; 2026 Alodía Hernández. Todos los derechos reservados</p>
     </footer>  <!--cierre,copirigth,rrss...-->
 </body>
 </html>
